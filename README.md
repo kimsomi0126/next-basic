@@ -45,3 +45,46 @@
 ### 1.3. Client Component 가 Next.js 기본 컴포넌트
 
 - 'use client' 작성하면 Hook 사용, 이벤트 핸들러도 가능
+
+### 1.4. 라우팅 자동 지원
+
+- App Router 방식이므로 보여줄 페이지들은 반드시 app/ 폴더에 생성
+- 웹 브라우저 URL형식에 맞게 /app/폴더생성
+- 사용하는 파일 명이 미리 약속이 되어있다. (정적경로)
+  - [파일명참조](https://nextjs.org/docs/getting-started/project-structure)
+  - http://localhost:3000/board/page.tsx
+    /app/board/page.tsx 실행
+- 동적경로
+  - http://localhost:3000/board/[aaa] 폴더명 / page.tsx
+  - http://localhost:3000/board/1
+  - http://localhost:3000/board/100
+  - http://localhost:3000/board/500
+
+### 1.5. 페이지 이동
+
+- Link 라이브러리 내장 (react-router-dom 아님)
+- useRouter : 버튼/실행결과에 따라 페이지 이동('use client')
+
+### 1.6. CSS
+
+- CSS
+- CSS-IN-JS : styled, emotion
+- 파일명.module.css
+- SCSS
+
+### 1.7. API 백엔드 데이터 패칭
+
+- React Query 와 비슷하게 처리 (revalitdate : 재검증)
+- Next.js 내부적으로 Fetch API 제공
+
+### 1.8. Metadata 제공
+
+- SEO 지원 (미리 html 만들기 때문에 검색엔진 html 노출)
+- 정적 Metadata 객체 생성 및 적용
+- 동적 Metadata 객체 생성 및 적용
+
+### 1.9. 배포
+
+- Server가 있어야합니다.
+- Node.js 버전을 맞추어야 함
+- 환경설정 파일을 셋팅
