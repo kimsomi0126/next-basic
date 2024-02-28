@@ -1,0 +1,26 @@
+.list {
+  position: relative;
+  padding: 2rem;
+  background: #f7f7f7;
+  margin-top: 2rem;
+}
+.list li {
+  position: relative;
+  display: inline-block;
+}
+.list li a {
+  color: #333;
+}
+.list li:hover a {
+  color: #000;
+}
+.list li:before {
+  content: "|";
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: #999;
+  vertical-align: 15%;
+}
+.list li:first-of-type::before {
+  display: none;
+}
