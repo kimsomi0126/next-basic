@@ -38,3 +38,11 @@ button {
 button:hover {
   background-color: rgb(132, 49, 205);
 }
+
+td {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+.txt-center {
+  text-align: center;
+}

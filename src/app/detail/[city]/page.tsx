@@ -6,32 +6,24 @@ import { useRouter } from "next/navigation";
 // import Link from "next/link";
 import React from "react";
 
-// function ( parameter: 데이터 종류)
-// 1. const page = (받은값:Props) => {
-
-// function ( {속성:값}: 데이터 종류)
-// 2. const page = ({속성:값}:Props) => {
-
-// 약속된 속성명 params
-// 3. const page = ({params:params}:Props) => {
-
-// 축약형 적용
-// 4. const page = ({params}:Props) => {
-// type Props = {
-//   // 키명 : {속성:값종류};
-//   // params : {속성:값종류};
-//   // params : {city:값종류};
-//   // params: { city: string };
-// };
-
 type Props = {
   params: {
     city: string;
   };
+  searchParams: {
+    cityName: string;
+  };
 };
 
-const Detail = ({ params }: Props) => {
-  const cityName = decodeURI(params.city);
+export function generateMetadata({ params, searchParams }: Props) {
+  return {
+    title: `Next.js 프로젝트 : ${searchParams.cityName}지역상세`,
+    description: `${searchParams.cityName}지역 상세페이지`,
+  };
+}
+
+const Detail = ({ params, searchParams }: Props) => {
+  const cityName = searchParams.cityName;
   // 첫 페이지로 이동
   // 주의사항 : react-router-dom (X)
   // import { useRouter } from "next/navigation";
